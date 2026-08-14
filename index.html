@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>澳門旅遊景點導覽</title>
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, #edf6f3 0%, #f7f9fa 100%);
+            color: #333;
+            margin: 0;
+            padding: 0;
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .container {
+            text-align: center;
+            background: rgba(255, 255, 255, 0.96);
+            padding: 2.5rem 2rem;
+            border-radius: 16px;
+            box-shadow: 0 12px 30px rgba(0, 0, 0, 0.08);
+            max-width: 460px;
+            width: 90%;
+        }
+
+        h1 {
+            color: #1e3a5f;
+            margin: 0 0 0.75rem;
+            font-size: clamp(1.8rem, 4vw, 2.3rem);
+        }
+
+        .subtitle {
+            color: #6b7a8f;
+            margin: 0 0 2rem;
+            line-height: 1.6;
+            font-size: 1rem;
+        }
+
+        .menu-list {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        .menu-item {
+            margin-bottom: 1rem;
+        }
+
+        .btn {
+            display: block;
+            width: 100%;
+            padding: 14px 18px;
+            background: linear-gradient(135deg, #3a86ff, #2c6de8);
+            color: #fff;
+            text-decoration: none;
+            border-radius: 10px;
+            font-weight: 700;
+            transition: all 0.25s ease;
+            box-shadow: 0 6px 16px rgba(58, 134, 255, 0.25);
+        }
+
+        .btn:hover {
+            transform: translateY(-2px);
+            background: linear-gradient(135deg, #2d74eb, #255fcd);
+            box-shadow: 0 10px 22px rgba(58, 134, 255, 0.35);
+        }
+
+        .btn-green {
+            background: linear-gradient(135deg, #2ecc71, #27ae60);
+            box-shadow: 0 6px 16px rgba(46, 204, 113, 0.25);
+        }
+
+        .btn-green:hover {
+            background: linear-gradient(135deg, #27ae60, #1f9953);
+            box-shadow: 0 10px 22px rgba(46, 204, 113, 0.35);
+        }
+
+        .btn-orange {
+            background: linear-gradient(135deg, #f39c12, #e67e22);
+            box-shadow: 0 6px 16px rgba(243, 156, 18, 0.25);
+        }
+
+        .btn-orange:hover {
+            background: linear-gradient(135deg, #e67e22, #d97706);
+            box-shadow: 0 10px 22px rgba(243, 156, 18, 0.35);
+        }
+
+        .notes-box {
+            margin-top: 1.8rem;
+            padding-top: 1rem;
+            border-top: 1px solid #e9edf3;
+        }
+
+        .notes-label {
+            display: block;
+            color: #55677d;
+            font-size: 0.9rem;
+            margin-bottom: 0.75rem;
+            font-weight: 600;
+        }
+
+        .btn-note {
+            display: inline-block;
+            padding: 12px 18px;
+            background: #6c5ce7;
+            color: white;
+            text-decoration: none;
+            border-radius: 8px;
+            font-weight: 700;
+            transition: all 0.25s ease;
+            box-shadow: 0 6px 16px rgba(108, 92, 231, 0.25);
+        }
+
+        .btn-note:hover {
+            background: #5b4dd4;
+            transform: translateY(-2px);
+            box-shadow: 0 10px 22px rgba(108, 92, 231, 0.35);
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>澳門旅遊景點導覽</h1>
+        <p class="subtitle">請選擇您想瀏覽的頁面，或查看原始筆記資料。</p>
+
+        <ul class="menu-list">
+            <li class="menu-item">
+                <a href="Macau-1.html" class="btn">🏛️ Macau-1</a>
+            </li>
+            <li class="menu-item">
+                <a href="Macau-2.html" class="btn btn-green">🏙️ Macau-2</a>
+            </li>
+            <li class="menu-item">
+                <a href="Macau-3.html" class="btn btn-orange">🌆 Macau-3</a>
+            </li>
+            <li class="menu-item">
+                <a href="supplement.html" class="btn">📘 Supplement</a>
+            </li>
+        </ul>
+
+        <div class="notes-box">
+            <span class="notes-label">原始筆記</span>
+            <a href="https://docs.google.com/presentation/d/1sUzM0fTzPOcLT827YUsmqRAfLu0ZRzwAInpLKQsHepc/edit?slide=id.g3f6f000a291_0_1#slide=id.g3f6f000a291_0_1" class="btn-note" target="_blank" rel="noopener noreferrer">
+                開啟 Google 簡報筆記
+            </a>
+        </div>
+    </div>
+</body>
+</html>
