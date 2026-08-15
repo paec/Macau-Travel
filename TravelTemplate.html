@@ -364,8 +364,12 @@ function showPlan(id, updateHash = true, shouldScroll = true) {
 
   if (updateHash) history.replaceState(null, '', `#${id}`);
   if (shouldScroll) {
+    const main = document.getElementById('planContainer');
+    const sticky = document.querySelector('.sticky-tabs');
+    const targetY = main ? main.offsetTop - (sticky ? sticky.offsetHeight : 0) - 12 : 0;
     window.scrollTo({
-      top: document.querySelector('.sticky-tabs').offsetTop,
+      top: Math.max(targetY, 0),
+      left: 0,
       behavior: 'smooth'
     });
   }
