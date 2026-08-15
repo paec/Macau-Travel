@@ -39,7 +39,7 @@ const imageSources={
   image2:'https://dt6bhtsl5ivrb.cloudfront.net/assets/public/styles/medium/public/2025-05/MSC-Fitness%20Center%20Selected%20Angle-D8C_9089-01%20copy.jpg.webp?VersionId=MG3l93l6KqC4gj2m_7GMxMwDWTI4tkAP&itok=Zdijk0Ry',
   image3:'https://www.bring-you.info/imgs/2025/03/Londoner-Macao-38.jpg',
   image4:'https://www.bring-you.info/imgs/2025/03/Venetian-Macao-21.jpg',
-  image5:'https://pic.huitu.com/res/20200522/1309521_20200522153938556037_1.jpg',
+  image5:'./ppt-media/image5.jpg',
   image6:'https://topbuildersgroup.com/wp-content/uploads/2018/12/WeChat-Image_20181110104931-copy-1024x578.jpg',
   '新濠影滙飯店': 'https://i0.wp.com/www.tripgoez.com/wp-content/uploads/2017/11/bg-home.jpg?fit=1600%2C990&ssl=1',
   '夢幻彩虹鎮・動物方城市': 'https://i0.wp.com/overmedia.tw/wp-content/uploads/2026/05/%E5%A4%A2%E5%B9%BB%E5%BD%A9%E8%99%B9%E9%8E%AE.jpeg?resize=1200%2C800&ssl=1',
@@ -55,14 +55,14 @@ const travelData={tabs:[
     id:'day1',label:'9/28 行程',icon:'✈️',title:'第一天｜抵達澳門・路氹夜遊',accent:'#0f6f8c',subtitle:'從高雄小港機場抵達澳門後，先以免費接駁車進入路氹，完成巴黎人、倫敦人、威尼斯人與影滙的第一晚動線。',metric:'10:35 抵澳門',notice:'第一天有固定班次與營業時間：免費接駁車 11:00～21:00、巨星滙 15:00 後 Check-in；若提前抵達，先寄放行李再用餐。',
     overview:{route:'✈️ 高雄小港機場 → 澳門機場 → 新濠影滙／巨星滙 → 巴黎人 → 倫敦人 → 威尼斯人 → 巨星滙泳池與夜景',chips:['9/28（一）','10:35 抵達澳門','路氹步行串聯','晚間泳池'],timeline:[{name:'高雄小港',note:'07:00 Check-in'},{name:'澳門機場',note:'10:35 抵達',mode:'✈️'},{name:'巴黎人・倫敦人・威尼斯人',note:'13:30～17:30',mode:'🚶'},{name:'威尼斯人-晚餐',note:'17:40 晚餐',mode:'🚶'},{name:'巨星滙',note:'19:10 入住',mode:'🏨'}]},
     stops:[
-      {name:'高雄小港機場',description:'07:00 抵達機場辦理 Check-in；長榮航空 09:00 起飛，10:35 抵達澳門機場。',map:'Kaohsiung International Airport',tag:'固定時間',image:imageURL('image1'),imageFit:'contain'},
-      {name:'澳門機場接駁車',description:'出機場出口後往右走到「接駁巴士候車區」。免費接駁服務 11:00～21:00，約 15～20 分鐘一班；抵達後先依現場指示前往新濠影滙。',map:'Macau International Airport Shuttle Bus',tag:'班次限定',image:imageURL('image7'),imageFit:'contain',source:{label:'查看接駁班次',url:'https://sumiutravel.com/macau-studiocity-free-shuttle-bus-timetable/'}},
-      {name:'新濠影滙・巨星滙',description:'抵達後先寄放行李；原規劃 15:00 後 Check-in。影滙以輕軌蓮花站較近，先處理房務再開始路氹行程。',map:'Studio City Macau Celebrity Tower',tag:'先寄放',image:imageURL('image3')},
-      {name:'巴黎人美食廣場',description:'12:00～13:15 午餐，位於巴黎人 5F；用餐後從巴黎人外部與內部開始逛街，銜接下午的飯店群動線。',map:'The Parisian Macao Food Court',tag:'12:00～13:15',image:imageURL('image6'),source:{label:'餐廳資訊',url:'https://hk.parisianmacao.com/restaurants.html'}},
-      {name:'巴黎人 → 倫敦人 → 威尼斯人',description:'13:30～17:30 依序逛巴黎、倫敦、威尼斯，各約 1.5 小時；',detail:{title:'倫敦人 2F 沿途小景點',place:'Shake Shack 附近',description:'可找英倫風大廳的水晶金殿與其後方大茶杯、沙夫茨伯里紀念噴泉，適合在前往威尼斯人前短暫停留與拍照。'},map:'The Londoner Macao',tag:'倫敦人 16:00 大廳秀',image:imageURL('image8')},
-      {name:'威尼斯人美食街',description:'17:40～18:40 在威尼斯人 3F 美食街晚餐，可找滿記甜品（楊枝甘露）、好好運茶（港式奶茶）等餐點。',map:'The Venetian Macao Food Court',tag:'17:40～18:40',image:imageURL('image4'),imageFit:'contain'},
-      {name:'路氹夜景與影滙泳池',description:'約 18:40 從威尼斯人外側步行約 20 分鐘，拍攝威尼斯人／倫敦人夜景；19:10 回巨星滙 Check-in。戶外泳池至 20:00，之後可轉室內泳池；3F 水療至 23:00，室內泳池至 22:00。',map:'Studio City Macau',tag:'19:10 後',image:imageURL('image5')},
-      {name:'巴黎人 7F・倫敦人夜景',description:'游完泳後，去巴黎人 7F 可免費遠眺倫敦人；倫敦人外牆光影秀約 30 分鐘一場。新濠影滙外部夜景可留到隔天晚上補拍。',map:'The Parisian Macao Eiffel Tower 7F',tag:'夜景備選',image:imageURL('image3')}
+      {name:'高雄小港機場',description:'✨07:00 抵達機場辦理 Check-in；<br>✨長榮航空 09:00 起飛，10:35 抵達澳門機場。',map:'Kaohsiung International Airport',tag:'固定時間',image:imageURL('image1'),imageFit:'contain'},
+      {name:'澳門機場接駁車',description:'✨出機場出口後往右走到「接駁巴士候車區」。<br>✨免費接駁服務 11:00～21:00，約 15～20 分鐘一班；<br>✨抵達後先依現場指示前往新濠影滙。',map:'Macau International Airport Shuttle Bus',tag:'班次限定',image:imageURL('image7'),imageFit:'contain',source:{label:'查看接駁班次',url:'https://sumiutravel.com/macau-studiocity-free-shuttle-bus-timetable/'}},
+      {name:'新濠影滙・巨星滙',description:'✨抵達後先寄放行李；<br>✨原規劃 15:00 後 Check-in。<br>✨影滙以輕軌蓮花站較近，先處理房務再開始路氹行程。',map:'Studio City Macau Celebrity Tower',tag:'先寄放',image:imageURL('image3')},
+      {name:'巴黎人美食廣場',description:'✨12:00～13:15 午餐，位於巴黎人 5F；<br>✨用餐後從巴黎人外部與內部開始逛街，銜接下午的飯店群動線。',map:'The Parisian Macao Food Court',tag:'12:00～13:15',image:imageURL('image6'),source:{label:'餐廳資訊',url:'https://hk.parisianmacao.com/restaurants.html'}},
+      {name:'巴黎人 → 倫敦人 → 威尼斯人',description:'✨13:30～17:30 依序逛巴黎、倫敦、威尼斯，各約 1.5 小時；',detail:{title:'倫敦人 2F 沿途小景點',place:'Shake Shack 附近',description:'可找英倫風大廳的水晶金殿與其後方大茶杯、沙夫茨伯里紀念噴泉，適合在前往威尼斯人前短暫停留與拍照。'},map:'The Londoner Macao',tag:'倫敦人 16:00 大廳秀',image:imageURL('image8')},
+      {name:'威尼斯人美食街',description:'✨17:40～18:40 在威尼斯人 3F 美食街晚餐，可找滿記甜品（楊枝甘露）、好好運茶（港式奶茶）等餐點。',map:'The Venetian Macao Food Court',tag:'17:40～18:40',image:imageURL('image4'),imageFit:'contain'},
+      {name:'路氹夜景與影滙泳池',description:'✨約 18:40 從威尼斯人外側步行約 20 分鐘，拍攝威尼斯人／倫敦人夜景；<br>✨19:10 回巨星滙 Check-in。<br>✨戶外泳池至 20:00，之後可轉室內泳池；<br>✨3F 水療至 23:00，室內泳池至 22:00。',map:'Studio City Macau',tag:'19:10 後',image:imageURL('image5')},
+      {name:'巴黎人 7F・倫敦人夜景',description:'✨游完泳後，去巴黎人 7F 可免費遠眺倫敦人；<br>✨倫敦人外牆光影秀約 30 分鐘一場。<br>✨新濠影滙外部夜景可留到隔天晚上補拍。',map:'The Parisian Macao Eiffel Tower 7F',tag:'夜景備選',image:imageURL('image3')}
     ],
     highlights:[
       {title:'威尼斯人',description:'',image:'https://www.bring-you.info/imgs/2025/03/Venetian-Macao-12.jpg'},
