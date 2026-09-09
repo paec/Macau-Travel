@@ -41,23 +41,23 @@ const boldProperNames=text=>text.replace(properNamePattern,'<strong>$1</strong>'
 const imageSources={
   hero:'ppt-media/image10.png',
   studio:'./ppt-media/studio.png',
-  ferris:'https://dt6bhtsl5ivrb.cloudfront.net/assets/public/styles/large/public/2026-04/1468x824_TC-teaser.jpg.webp?VersionId=nnRpr6QR2DP9waU20qRBhUOeJ_ByNCy4&itok=C4VacWoV',
-  taipaMap:'https://nigi33.tw/wp-content/uploads/2024/03/20240328143443_0.jpg',
+  ferris:'./ppt-media/ferris.webp',
+  taipaMap:'./ppt-media/taipaMap.jpg',
   taipaRoute:'./ppt-media/taipaRoute.jpg',
-  pool:'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQBYcUuLwPQ8CM0bQAocXWI6SOPp6lau0hWJaGzOtK4cK9krREUrnhB0Nf5&s=10',
+  pool:'./ppt-media/pool.jpg',
   londonerCups:'ppt-media/image5.png',
   lightRail:'ppt-media/image6.png',
   customs:'ppt-media/image7.png',
-  almond:'https://img.yengkee.com.mo/items/img_2026-01-19-09-40-19610.jpeg',
-  foodCourt:'https://dynamic-media-cdn.tripadvisor.com/media/photo-o/33/23/f2/c9/caption.jpg?w=1100&h=1100&s=1',
+  almond:'./ppt-media/almond.jpeg',
+  foodCourt:'./ppt-media/foodCourt.jpg',
   londoner:'ppt-media/image10.png',
   gym:'ppt-media/image11.png',
-  shuttle:'https://okinawafamilynotes.com/images/articles/okinawa-rental-car-pickup-return-guide/airport-shuttle-family.png',
+  shuttle:'./ppt-media/shuttle.png',
   drink:'ppt-media/image13.png',
-  lotus:'https://mimigo.tw/wp-content/uploads/thumb_20200711151712_58.jpg',
-  takeoff:'https://cdn2.ettoday.net/images/8369/d8369760.jpg',
-  taipaWalk:'https://content.macaotourism.gov.mo/uploads/mgto_sightseeing/edcc5dd6ccf459ba58bbb24f61cb0d3a95dbf578.jpg',
-  streetfood:'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRx1iWcZ65boCMOpc35hnRKjUvVcYqsG3arDtFyHc2d3_MffBf9Eq7erxk&s=10'
+  lotus:'./ppt-media/lotus.jpg',
+  takeoff:'./ppt-media/takeoff.jpg',
+  taipaWalk:'./ppt-media/taipaWalk.jpg',
+  streetfood:'./ppt-media/streetfood.jpg'
 };
 const imageURL=(key,text,index)=>imageSources[key]||placeholder(text,index);
 document.documentElement.style.setProperty('--hero-image',`url("${imageSources.hero}")`);

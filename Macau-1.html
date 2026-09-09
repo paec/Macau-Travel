@@ -33,19 +33,20 @@ const maps=query=>`https://www.google.com/maps/search/?api=1&query=${encodeURICo
 const placeholder=(text,index)=>`https://placehold.co/640x360/e7eef2/5d6c7d?text=${encodeURIComponent(text+' '+index)}`;
 const imageSources={
   hero:'ppt-media/image10.png',
-  image1:'https://img.ltn.com.tw/Upload/news/600/2022/06/20/3966541_1_1.jpg',
-  image7:'https://statics.exmoo.com/uploads/2019-08-07/MrE2gYvvE4Drx2FYUxiA.jpg',
-  image8:'https://api.cosmopolitan.com.hk/var/site/storage/images/_aliases/img_730w/9/7/2/4/7084279-1-chi-HK/1.jpg',
-  image2:'https://dt6bhtsl5ivrb.cloudfront.net/assets/public/styles/medium/public/2025-05/MSC-Fitness%20Center%20Selected%20Angle-D8C_9089-01%20copy.jpg.webp?VersionId=MG3l93l6KqC4gj2m_7GMxMwDWTI4tkAP&itok=Zdijk0Ry',
-  image3:'https://www.bring-you.info/imgs/2025/03/Londoner-Macao-38.jpg',
-  image4:'https://www.bring-you.info/imgs/2025/03/Venetian-Macao-21.jpg',
+  image1:'./ppt-media/day1-airport.jpg',
+  image7:'./ppt-media/day1-shuttle.jpg',
+  image8:'./ppt-media/day1-londoner.jpg',
+  image2:'./ppt-media/day1-gym.webp',
+  image3:'./ppt-media/day1-londoner-view.jpg',
+  image4:'./ppt-media/day1-venetian.jpg',
   image5:'./ppt-media/image5.jpg',
-  image6:'https://topbuildersgroup.com/wp-content/uploads/2018/12/WeChat-Image_20181110104931-copy-1024x578.jpg',
-  '新濠影滙飯店': 'https://i0.wp.com/www.tripgoez.com/wp-content/uploads/2017/11/bg-home.jpg?fit=1600%2C990&ssl=1',
-  '夢幻彩虹鎮・動物方城市': 'https://i0.wp.com/overmedia.tw/wp-content/uploads/2026/05/%E5%A4%A2%E5%B9%BB%E5%BD%A9%E8%99%B9%E9%8E%AE.jpeg?resize=1200%2C800&ssl=1',
-  '三樓室內／室外泳池': 'https://dt6bhtsl5ivrb.cloudfront.net/assets/public/styles/medium/public/2025-06/Outdoor-Swimming-Pool_banner.jpg.webp?VersionId=D1935gFPSNbkiLfPJ0pxJBHkpW3_PRCJ&itok=AbZLO9PZ',
-  '影滙之星': 'https://ik.imagekit.io/tvlk/xpe-asset/GZtqLuOqb-33qvDmG1FcMeN1eFEH7PVvlsdFr2AUBT39jzSxIGG5kZNhhHY-p7nw/1000707572034/Studio-City-Macau-Golden-Reel-Ferris-Wheel-a0611af8-9116-4f58-b74b-3b09c168895c.jpeg?_src=imagekit&tr=dpr-2,c-at_max,h-500,q-60,w-740',
-  '免費接駁車': 'https://mimigo.tw/wp-content/uploads/pixnet/cbeb8ac308f505f5d260f5be5a862e9c.jpg'
+  image6:'./ppt-media/day1-parisian-food.jpg',
+  '新濠影滙飯店': './ppt-media/day1-studio-hotel.jpg',
+  '夢幻彩虹鎮・動物方城市': './ppt-media/day1-rainbow-town.jpeg',
+  '三樓室內／室外泳池': './ppt-media/day1-pool.webp',
+  '影滙之星': './ppt-media/day1-golden-reel.jpeg',
+  '免費接駁車': './ppt-media/day1-free-shuttle.jpg',
+  'Disney-magical-jungle-lodge': './ppt-media/Disney-magical-jungle-lodge.jpg',
 };
 const imageURL=(key,text,index)=>imageSources[key]||placeholder(text,index);
 document.documentElement.style.setProperty('--hero-image',`url("${imageSources.hero}")`);
@@ -65,7 +66,7 @@ const travelData={tabs:[
       {name:'巴黎人 7F・倫敦人夜景',description:'✨游完泳後，去巴黎人 7F 可免費遠眺倫敦人；<br>✨倫敦人外牆光影秀約 30 分鐘一場。<br>✨新濠影滙外部夜景可留到隔天晚上補拍。',map:'The Parisian Macao Eiffel Tower 7F',tag:'夜景備選',image:imageURL('image3')}
     ],
     highlights:[
-      {title:'威尼斯人',description:'',image:'https://www.bring-you.info/imgs/2025/03/Venetian-Macao-12.jpg'},
+      {title:'威尼斯人',description:'',image:'./ppt-media/day1-venetian-highlight.jpg'},
     ],
     checks:[],
     links:[{label:'巴黎人餐廳資訊（簡報連結）',url:'https://hk.parisianmacao.com/restaurants.html'},{label:'倫敦人與餐飲參考（簡報備註）',url:'https://supertaste.tvbs.com.tw/travel/359800'}]
@@ -75,7 +76,7 @@ const travelData={tabs:[
     overview:{route:'🚆 蓮花站 → 新濠影滙三座酒店 → 1F 迪士尼滙聚嘉年華 → 3F 泳池／水療 → 免費接駁車與園區設施',chips:['蓮花站較近','三座酒店','迪士尼主題空間','泳池分時段'],timeline:[{name:'輕軌蓮花站',note:'步行抵達'},{name:'三座酒店',note:'明星滙・巨星滙・映星滙',mode:'🏨'},{name:'1F 主題空間',note:'嘉年華與彩虹鎮',mode:'🎠'},{name:'3F 設施',note:'泳池・水療',mode:'🏊'},{name:'免費接駁',note:'依班次移動',mode:'🚌'}]},
     stops:[
       {name:'新濠影滙飯店',description:'新濠影滙共有明星滙、巨星滙、映星滙三座酒店；本次住宿為巨星滙。以輕軌蓮花站較近，抵達後可先確認房務與行李安排。',map:'Studio City Macau',tag:'住宿核心',image:imageURL('新濠影滙飯店')},
-      {name:'1F 迪士尼滙聚嘉年華',description:'1 樓大廳有「叢林妙妙屋」，可作為進飯店後的第一個主題空間；另可順路找時代廣場的「奇幻海洋島」。',map:'Studio City Macau Disney Carnival',tag:'1F',image:imageURL('image3')},
+      {name:'1F 迪士尼滙聚嘉年華',description:'1 樓大廳有「叢林妙妙屋」，可作為進飯店後的第一個主題空間；另可順路找時代廣場的「奇幻海洋島」。',map:'Studio City Macau Disney Carnival',tag:'1F',image:imageURL('Disney-magical-jungle-lodge')},
       {name:'夢幻彩虹鎮・動物方城市',description:'1 樓輕軌站入口處有色彩繽紛的「夢幻彩虹鎮」，同區也有《動物方城市》、《艾莉絲》相關主題布置，適合搭乘輕軌前後拍照。',map:'Studio City Macau Lotus Station',tag:'輕軌入口',image:imageURL('夢幻彩虹鎮・動物方城市')},
       {name:'健身房',description:'健身房 24 小時開放；07:00～22:00 有工作人員在場。健身房位於巨星滙 3 樓。',map:'Studio City Macau Fitness Center',tag:'24 小時',image:imageURL('image2'),imageFit:'contain'},
       {name:'三樓室內／室外泳池',description:'室內泳池 07:00～22:00；室外泳池 09:00～20:00。若第一晚 20:00 後才回到飯店，可改用室內泳池；3 樓水療開到 23:00。',map:'Studio City Macau Swimming Pool',tag:'分時段',image:imageURL('三樓室內／室外泳池')},
@@ -83,7 +84,7 @@ const travelData={tabs:[
       {name:'免費接駁車',description:'簡報附有 2026/7/1 起的接駁車表格；可先查由新濠影滙出發與往新濠影滙方向的班次，再決定是否以接駁車銜接機場、口岸或其他飯店。',map:'Studio City Macau Shuttle Bus',tag:'先查班次',image:imageURL('免費接駁車'),imageFit:'contain',source:{label:'官方交通資訊',url:'https://www.studiocity-macau.com/tc/getting-here#getting-here-static-page-section-free-shuttle'}}
     ],
     highlights:[
-      {title:'期間限定迪士尼主題美食',description:'叢林妙妙屋旁的「嘉宴」規劃米奇造型薄餅、小熊維尼主題漢堡、奇奇與蒂蒂造型蛋糕與主題調飲；「羅浮餅廊及輕食」則以《動物方城市》為靈感推出甜甜圈、可麗露、爪爪冰棒與特色飲品。加入濠友薈會員，簡報備註寫有兩家餐廳主題餐點全單 9 折。',image:'https://snoopyblog.com/wp-content/uploads/2026/06/%E6%BE%B3%E9%96%80%E6%96%B0%E6%BF%A0%E5%BD%B1%E6%BB%99day2-318.jpg'},
+      {title:'期間限定迪士尼主題美食',description:'叢林妙妙屋旁的「嘉宴」規劃米奇造型薄餅、小熊維尼主題漢堡、奇奇與蒂蒂造型蛋糕與主題調飲；「羅浮餅廊及輕食」則以《動物方城市》為靈感推出甜甜圈、可麗露、爪爪冰棒與特色飲品。加入濠友薈會員，簡報備註寫有兩家餐廳主題餐點全單 9 折。',image:'./ppt-media/day1-disney-food.jpg'},
     ],
     checks:['安排 1F 迪士尼主題空間與輕軌入口拍照'],
     links:[{label:'新濠影滙免費接駁車時刻表（簡報連結）',url:'https://sumiutravel.com/macau-studiocity-free-shuttle-bus-timetable/'},{label:'新濠影滙官方交通資訊（簡報連結）',url:'https://www.studiocity-macau.com/tc/getting-here#getting-here-static-page-section-free-shuttle'},{label:'影滙園區設施參考',url:'https://bjsmile.tw/studio-city-macau/#3_%E6%96%B0%E6%BF%A0%E5%BD%B1%E6%BB%99%E6%BB%BF%E7%B4%9B%E6%A8%82%E5%9C%92'}]
